@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catatan Keuangan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💵 Catatan Keuangan Saya</h1>
+        
+        <div class="balance-card">
+            <h2>Saldo Saat Ini</h2>
+            <div class="balance-amount" id="balanceTotal">Rp 0</div>
+        </div>
+
+        <div class="form-card">
+            <h2>➕ Tambah Transaksi Baru</h2>
+            <form id="transactionForm">
+                <div class="input-group">
+                    <label for="desc">Keterangan:</label>
+                    <input type="text" id="desc" placeholder="Misal: Gaji, Makan, Transport" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="amount">Jumlah Uang:</label>
+                    <input type="number" id="amount" placeholder="Masukkan angka" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Jenis:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="type" value="income" checked>
+                            <span>Pemasukan</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="type" value="expense">
+                            <span>Pengeluaran</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit">Tambah Transaksi</button>
+            </form>
+        </div>
+
+        <div class="history-card">
+            <h2>📜 Riwayat Transaksi</h2>
+            <div id="transactionHistory">
+                <p class="empty-message">Belum ada transaksi</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
